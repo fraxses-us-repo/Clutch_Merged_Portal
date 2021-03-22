@@ -1,0 +1,68 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% import 'appbuilder/general/lib.html' as lib %}
+
+{% block content %}
+
+<style>
+.btn {
+	color: #2f1d57; 
+	border: none;
+	background-color: white;
+	padding: 8px 22px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+}
+
+.icon-white {
+       color:#2f1d57;
+}
+
+.well {
+       background-color:#2f1d57;
+}
+
+.panel-primary {
+	background-color: #2f1d57;,
+	color: white
+}
+
+.panel-heading {
+        background-color: #2f1d57;
+        color: white;
+}
+
+[title^='Back'], [title*='Back']{
+    display: none;
+}
+
+select{
+	width: 150px;
+	height: 30px;
+	padding: 5px;
+	color: gray;
+}
+select option { color: black; }
+select option:first-child{
+	  color: gray;
+}
+</style>
+
+{% import 'appbuilder/general/lib.html' as lib %}
+
+
+{% block edit_form %}
+    <div id="Home" class="" style="background-color:#2f1d57; color:white;">
+  {{ widgets.get('edit')(form_action=form_action)|safe }} 
+    </div>
+{% endblock %}
+
+{{ lib.panel_end() }}
+
+{% endblock %}
+
+{% block add_tail_js %}
+<script src="{{url_for('appbuilder.static',filename='js/ab_keep_tab.js')}}"></script>
+{% endblock %}

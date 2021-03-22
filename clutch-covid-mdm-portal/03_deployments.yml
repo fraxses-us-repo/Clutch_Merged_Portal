@@ -1,0 +1,32 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clutch-cvd
+  namespace: fraxses-clutchhealth
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: clutch-cvd
+  template:
+    metadata:
+      labels:
+        component: clutch-cvd
+    spec:
+      terminationGracePeriodSeconds: 10
+      imagePullSecrets:
+        - name: fraxses-reg-cred
+      containers:
+        - name: clutch-cvd-img
+          imagePullPolicy: Always
+          image: registry.fraxses.com/project/clutch/cvd:001
+          ports:
+            - containerPort: 49002
+              name: clutch-cvd-port
+          terminationMessagePath: "/dev/termination-log"
+          terminationMessagePolicy: File
+          resources:
+            requests:
+              memory: 1000Mi
+              cpu:  1500m

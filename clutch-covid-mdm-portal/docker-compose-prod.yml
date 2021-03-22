@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  clutch_database:
+    build:
+      context: .
+    container_name: clutch_diagnostics_database
+    restart: always
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 49002:49002
+    expose:
+      - 49002
+
+  cloudsql-proxy:
+      container_name: cloudsql-proxy
+      image: gcr.io/cloudsql-docker/gce-proxy:1.11
+      command: /cloud_sql_proxy --dir=/cloudsql -instances=fraxses-dev00:us-east1:fraxses=tcp:0.0.0.0:5432 -credential_file=/secrets/cloudsql/credentials.json
+      ports:
+        - 5432:5432
+      volumes:
+        - /var/local/cloud-sql-proxy/fraxses-dev00-3500ed6bb723.json:/secrets/cloudsql/credentials.json
+      restart: always

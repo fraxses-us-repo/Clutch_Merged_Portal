@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "fraxses-dev00",
+  "private_key_id": "f8b6bd731cb5f00a3c9d66cae309f3053c50d46b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCyPSMHvxaJu1oE\n9DcSCe4tU4jApul0XCeNr1qIBqWwPYm0cEl+UkbsbSrkTrp6rhEg7yBU9/RYEvPc\nf+wAKvNHgWIQKQLMBDvP7BvQ7o+/HNtXr0mnZhB56IatzdVHwxph4VDFhNhe6EKN\nvH9u4IqZn2i9TCP/bNuVV9k++qOipx0bgvNRMSFL4w2PtZSAiRILxUWF8zO5bblR\nuz06Q8rP0pmKFGDA84liLTJSdQMWXPIpDvGerBA5il3FCDvcQH7CV/N+MG9hzsuj\nkCOd+mdau9r5FxZ9LtK6gSkySCHTO45kK/pzk8Tyhh911ohzp2np4LMRXclYwULN\nJXZqyd/pAgMBAAECggEACjNnCZa1XMEY9A8hBrqEQ9pTyYjT9BmhFuIKCZ5txaIj\n+yxw/FaLohTWX1YlJIfJSav92vcM6Cx/geddU54hqb49JUUfmJsGbE4sQl8g4XRu\nljxdOAQmnb+B07kjw3VmUWNCiudhNb9PrcpztZ4KuKOPrEPLDJ+HiqrKL2lLS6/x\ns3Xrb4SzB/QZYz3C/9LUX78WN+AarAOEFjUoIuvjz8T6YpOENTo0Fj6pSfjBefXo\nad2Xs51FhwIviFXcwqM4E7mZfloQpD3gCPGdoat+1+Kdj2rs1FdZINdk+00weAxx\n7cZO5wS0Exx8UKinVzoBciSMhwBOvWOTULGiVfFPnQKBgQDqYGTKLYYz2sIHG6nX\n6UtuA5k6veQntqQp80edQ7FMLBSs2puHFJ+snAYLkuNdjXTCHCghbafFKTwZtAGY\n8PiRq5IGeJeXRXMtxruT1EM3z0JOomv48a4bu61yjwS2Mjrld8KxMIKpSctaSQ4c\nIcfxr4aLl6Ivr1pb9LPXMFCNVQKBgQDCrtuweOOxjngKpQqTt+24VP5VAlvlhnOf\nZKVkVr0ryWF3Haxcpq+J89k0QNqp8H0kNPc5N/9aLf+RPf6pTPyPZgC6XUf2/cvk\nG3nu/5wWn6Eaw2V/XhF7RzUw2TSoyNEoRMQEOAUJuKDfi3xww7IAWTPwHnBInWtK\nRZEaBwSoRQKBgQDhCfj8n0VyWKNgS9GCfIBue4oO+vEsqJNrrCmg+LQt3U1kwun+\ng3DlPVIYnssssnvfPUXTAwTJrFQGoe2+ufERfVlSWUvEdWyoEV9eC7sWxSx3cECX\n4QY5nrRlgKkXf5dJaPpJQ7jRbweQAwFHRbBDgTOAqPGTM51hGc3r2nodmQKBgH9N\nI66DfjAOfwRG42GwdauBOEWSI1E018o0X8n6xfwp1Ke1KY30GPjWEQOQHOveq5XP\nZJFvwnPPfDwXE7zU8Jk8E+HJOVOSpY5lQRg84G4St5/ugSIF+txntapZfYuYtNvm\nC17O2sx+hANpDFgYPv7nVYUAAmAZP5zzXGxuhmcZAoGBAICV76QkX8QIvHPvxNlg\nJl4Xg2w2H8RXhTxEZiS1PU/5ld9XU1e/Angb21S1YtTmjtMZf6RW4oxzpinEf7Yy\nBvbFAxpXSzVwpp23Hn4pqwIfIuMb4sEkelKO1UJ20I+SuLO34YxpoCdqZCCRF57b\nYnIw51QwOKdO5xvx0PF6Kp1P\n-----END PRIVATE KEY-----\n",
+  "client_email": "clutch-diagnostics@fraxses-dev00.iam.gserviceaccount.com",
+  "client_id": "116834695843128167662",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/clutch-diagnostics%40fraxses-dev00.iam.gserviceaccount.com"
+}

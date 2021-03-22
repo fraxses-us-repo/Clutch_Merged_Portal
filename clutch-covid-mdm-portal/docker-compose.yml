@@ -1,0 +1,27 @@
+version: "3.7"
+services:
+  clutch_database:
+    build:
+      context: .
+    depends_on:
+      - db
+    container_name: clutch_diagnostics_database
+    restart: always
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 49002:49002
+
+  db:
+    environment:
+      POSTGRES_USER: fraxses
+      POSTGRES_PASSWORD: fraxses
+      POSTGRES_DB: clutch_diagnostics
+    image: postgres:latest
+    networks:
+      - default
+    ports:
+      - 5432:5432
+    restart: always
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data 

@@ -1,0 +1,70 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: clutch-cvd-svc-node
+  namespace: fraxses-clutchhealth
+  labels:
+    component: clutch-cvd
+spec:
+  ports:
+    - name: clutch-cvd-port
+      protocol: TCP
+      port: 49002
+      targetPort: 49002
+      nodePort: 30084
+  selector:
+    component: clutch-cvd
+  type: NodePort
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: clutch-cvd-svc
+  namespace: fraxses-clutchhealth
+  labels:
+    component: clutch-cvd
+spec:
+  ports:
+  - name: clutch-cvd-port
+    protocol: TCP
+    port: 49002
+    targetPort: 49002
+  selector:
+    component: clutch-cvd
+  type: ClusterIP
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: clutch-cvd-svc-headless
+  namespace: fraxses-clutchhealth
+  labels:
+    component: clutch-cvd
+spec:
+  ports:
+    - name: clutch-cvd-port
+      protocol: TCP
+      port: 49002
+      targetPort: 49002
+  selector:
+    component: clutch-cvd
+  clusterIP: None
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: clutch-cvd-svc-ilb
+  namespace: fraxses-clutchhealth
+  annotations:
+    networking.gke.io/load-balancer-type: "Internal"
+  labels:
+    component: clutch-cvd
+spec:
+  type: LoadBalancer
+  selector:
+    component: clutch-cvd
+  ports:
+  - port: 80
+    targetPort: 49002
+    protocol: TCP
